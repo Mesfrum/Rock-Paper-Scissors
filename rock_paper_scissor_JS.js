@@ -3,31 +3,30 @@ let computerScore = 0;
 let round = 0;
 let msg = 'Can you beat the computer?';
 
-function updateInfo(msg,playerScore,computerScore,round){
+function updateInfo(msg, playerScore, computerScore, round) {
     document.getElementById('msg').textContent = msg;
     document.getElementById('player-score').textContent = `player score - ${playerScore}`;
     document.getElementById('computer-score').textContent = `computer score - ${computerScore}`;
     document.getElementById('round').textContent = `round - ${round}`;
 }
 
-function getComputerChoice(){
-    let rps = ['rock','paper','scissor'];
-    let random = rps[Math.floor(Math.random()*rps.length)];
+function getComputerChoice() {
+    let rps = ['rock', 'paper', 'scissor'];
+    let random = rps[Math.floor(Math.random() * rps.length)];
     return random;
 };
 
-function game(playerChoice){
+function game(playerChoice) {
     let computerChoice = getComputerChoice();
-    let outcome = 0;
 
-    if (playerScore === 5 || computerScore === 5){
-        if(playerScore === 5){
+    if (playerScore === 5 || computerScore === 5) {
+        if (playerScore === 5) {
             msg = "You Win";
         }
-        else{
+        else {
             msg = "You Lose";
         }
-        updateInfo(msg,playerScore,computerScore,round);
+        updateInfo(msg, playerScore, computerScore, round);
         return 0;
     }
     // DRAW
@@ -46,22 +45,19 @@ function game(playerChoice){
         computerScore++;
     }
     round++;
-    updateInfo(msg,playerScore,computerScore,round);
-
+    updateInfo(msg, playerScore, computerScore, round);
 };
 
-document.getElementById('rock').addEventListener('click',()=>{
+document.getElementById('rock').addEventListener('click', () => {
     game('rock');
 });
-document.getElementById('paper').addEventListener('click',()=>{
+document.getElementById('paper').addEventListener('click', () => {
     game('paper');
 });
-document.getElementById('scissor').addEventListener('click',()=>{
+document.getElementById('scissor').addEventListener('click', () => {
     game('scissor');
 });
 
-document.getElementById('new-game').addEventListener('click',()=>{
-    updateInfo('Can you beat the computer?',0,0,0);
-
+document.getElementById('new-game').addEventListener('click', () => {
+    updateInfo('Can you beat the computer?', 0, 0, 0);
 });
-
