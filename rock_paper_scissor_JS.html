@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="rock_paper_scissor_JS.js"></script>
+    <link rel="stylesheet" href="rps.css">
 </head>
+
 <body>
-    <h1>Rock Paper Scissor</h1>
+    <div id="container">
+        <h1>Rock Paper Scissors</h1>
+        <h3 id="msg">Beat the Computer</h3>
+        <div class="info">
+            <div id="player-score">player score - </div>
+            <div id="round">round - </div>
+            <div id="computer-score">computer score - </div>
+        </div>
+        <div class="choices">
+            <button id="rock">ROCK</button>
+            <button id="paper">PAPER</button>
+            <button id="scissor">SCISSOR</button>
+        </div>
+        <div id="new-game">
+            <button id="new-game"> Play Again?</button>
+        </div>
+
+    </div>
+    <script src="rock_paper_scissor_JS.js"></script>
 </body>
+
 </html>
