@@ -59,5 +59,9 @@ document.getElementById('scissor').addEventListener('click', () => {
 });
 
 document.getElementById('new-game').addEventListener('click', () => {
+    playerScore = 0;
+    computerScore = 0;
+    round = 0;
+    msg = 'Can you beat the computer?';
     updateInfo('Can you beat the computer?', 0, 0, 0);
 });
